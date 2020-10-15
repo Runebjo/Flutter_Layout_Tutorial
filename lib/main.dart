@@ -8,18 +8,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Layout Tutorial',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Row(
-        children: [
-          BlueBox(),
-          BlueBox(),
-          BlueBox(),
-        ],
+      home: Scaffold(
+        backgroundColor: Colors.yellow,
+        body: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BlueBox(),
+              BiggerBlueBox(),
+              BlueBox(),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -31,6 +38,20 @@ class BlueBox extends StatelessWidget {
     return Container(
       width: 50,
       height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+
+class BiggerBlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 150,
       decoration: BoxDecoration(
         color: Colors.blue,
         border: Border.all(),
