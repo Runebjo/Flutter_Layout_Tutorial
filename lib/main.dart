@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.yellow,
         body: Center(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               BlueBox(),
-              BiggerBlueBox(),
+              Expanded(
+                child: BlueBox(),
+              ),
               BlueBox(),
             ],
           ),
