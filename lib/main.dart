@@ -20,10 +20,9 @@ class MyApp extends StatelessWidget {
           child: Row(
             children: [
               BlueBox(),
-              SizedBox(
-                width: 200,
-                child: BlueBox(),
-              ),
+              SizedBox(width: 50),
+              BlueBox(),
+              SizedBox(width: 25),
               BlueBox(),
             ],
           ),
