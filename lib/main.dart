@@ -18,19 +18,10 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.yellow,
         body: Center(
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.baseline,
-            textBaseline: TextBaseline.alphabetic,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.widgets,
-                size: 50,
-                color: Colors.blue,
-              ),
-              Icon(
-                Icons.widgets,
-                size: 80,
-                color: Colors.red,
-              ),
+              Image.network(
+                  'https://github.com/flutter/website/blob/master/examples/layout/sizing/images/pic2.jpg?raw=true'),
             ],
           ),
         ),
