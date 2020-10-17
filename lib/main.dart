@@ -15,13 +15,30 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.white,
         body: Center(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.network(
-                  'https://github.com/flutter/website/blob/master/examples/layout/sizing/images/pic2.jpg?raw=true'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.account_circle,
+                  size: 50,
+                ),
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Flutter McFlutter',
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
+                  Text(
+                    'Experienced App Developer',
+                  ),
+                ],
+              ),
             ],
           ),
         ),
